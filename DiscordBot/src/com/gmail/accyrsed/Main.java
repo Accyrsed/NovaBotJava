@@ -15,6 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 		try {
 			jda = new JDABuilder(AccountType.BOT).addEventListener(new NovaBot()).setToken(BOT_TOKEN).buildBlocking();
+			System.out.println("logged in");
 		} catch (LoginException | IllegalArgumentException | InterruptedException | RateLimitedException e) {
 			e.printStackTrace();
 		}
